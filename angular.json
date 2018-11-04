@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "v8dash2": {
+    "v8dash": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/v8dash2",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -57,18 +57,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "v8dash2:build"
+            "browserTarget": "v8dash:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "v8dash2:build:production"
+              "browserTarget": "v8dash:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "v8dash2:build"
+            "browserTarget": "v8dash:build"
           }
         },
         "test": {
@@ -102,7 +102,7 @@
         }
       }
     },
-    "v8dash2-e2e": {
+    "v8dash-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -111,11 +111,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "v8dash2:serve"
+            "devServerTarget": "v8dash:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "v8dash2:serve:production"
+              "devServerTarget": "v8dash:serve:production"
             }
           }
         },
@@ -131,5 +131,5 @@
       }
     }
   },
-  "defaultProject": "v8dash2"
+  "defaultProject": "v8dash"
 }
